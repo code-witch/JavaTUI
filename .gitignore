@@ -1,0 +1,11 @@
+#IntelliJ IDE Files
+*.iml
+*.idea/*
+
+#Eclipse IDE Files
+.project
+.classpath
+
+#Java Compiled Files
+bin/*
+*.class
