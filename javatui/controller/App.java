@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public final class App extends Application {
@@ -15,7 +16,8 @@ public final class App extends Application {
 
     @Override
     public void init() {
-        // Put more init stuff here if need be.
+        scene.setFill(Color.BLACK);
+//        scene.getStylesheets().add("");
         System.out.println("Initialization Completed");
     }
 
