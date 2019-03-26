@@ -1,6 +1,7 @@
 #IntelliJ IDE Files
 *.iml
 *.idea/*
+out/*
 
 #Eclipse IDE Files
 .project
