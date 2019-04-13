@@ -1,9 +1,12 @@
 package widgets;
 
-public class TerminalWidget extends Widget {
 
-    public TerminalWidget(int x, int y) {
-        super(x,y);
+import javafx.scene.control.TextArea;
+
+public class TerminalWidget extends Widget<TextArea> {
+
+    public TerminalWidget(int x,int y) {
+        super(x,y, new TextArea());
     }
 
     @Override
