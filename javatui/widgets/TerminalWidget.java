@@ -7,6 +7,7 @@ public class TerminalWidget extends Widget<TextArea> {
 
     public TerminalWidget(int x,int y) {
         super(x,y, new TextArea());
+        getHost().setEditable(false);
     }
 
     @Override

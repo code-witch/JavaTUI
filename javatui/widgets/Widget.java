@@ -6,7 +6,7 @@ import javafx.scene.layout.StackPane;
 
 public abstract class Widget<T extends Node> extends StackPane {
     private int x, y;
-    private T host;
+    private T host; // i wanted to use parent, but that's taken by the StackPane already
 
     public Widget(int x,int y, T host) {
         setX(x);
@@ -23,22 +23,21 @@ public abstract class Widget<T extends Node> extends StackPane {
         this.y = y;
     }
 
-    protected int getX() {
+    public int getX() {
         return x;
     }
 
-    protected int getY() {
+    public int getY() {
         return y;
     }
 
-    protected T getHost(){
+    public T getHost(){
         return host;
     }
 
     protected void setHost(T host){
         this.host = host;
-        this.getChildren().add(host);
-
+        this.getChildren().add(getHost());
     }
 
     @Override

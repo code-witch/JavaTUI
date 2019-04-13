@@ -2,11 +2,11 @@ package events;
 
 import controller.App;
 import javafx.event.EventHandler;
+import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.*;
 import javafx.scene.Node;
-import widgets.TerminalWidget;
-import widgets.Widget;
+import widgets.*;
 
 import java.util.Random;
 
@@ -31,7 +31,7 @@ public class WidgetAdd implements EventHandler<KeyEvent> {
         System.out.println(keyEvent.getCode().getName());
         if (keyEvent.getCode() == KeyCode.P) { // Spawn Widget Right
             xAmount++;
-            TerminalWidget terminalWidget = new TerminalWidget(xAmount,yAmount);
+            Widget terminalWidget = new TerminalWidget(xAmount,yAmount);
             terminalWidget.setStyle(
                     String.format("-fx-background-color: rgb(%02d, %02d, %02d);",
                             new Random().nextInt(256),
@@ -55,6 +55,26 @@ public class WidgetAdd implements EventHandler<KeyEvent> {
 
         } else if (keyEvent.getCode() == KeyCode.O) { // Delete Widget Up
 
+        }
+        else if(keyEvent.getCode() == KeyCode.E) {
+            for(Node n : App.root.getChildren()) {
+                if(n instanceof Widget) {
+                    Widget w = (Widget) n;
+                    if(w.getHost().isFocused()){
+                    ((TextArea) ((Widget)n).getHost()).setEditable(true);
+                    }
+                }
+            }
+        }
+        else if(keyEvent.getCode() == KeyCode.ESCAPE) {
+            for(Node n : App.root.getChildren()) {
+                if(n instanceof Widget) {
+                    Widget w = (Widget) n;
+                    if(w.getHost().isFocused()){
+                        ((TextArea) ((Widget)n).getHost()).setEditable(false);
+                    }
+                }
+            }
         }
     }
 
