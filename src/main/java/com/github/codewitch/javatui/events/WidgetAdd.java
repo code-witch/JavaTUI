@@ -1,12 +1,13 @@
-package events;
+package com.github.codewitch.javatui.events;
 
-import controller.App;
+import com.github.codewitch.javatui.controller.App;
+import com.github.codewitch.javatui.widgets.TerminalWidget;
+import com.github.codewitch.javatui.widgets.Widget;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.*;
 import javafx.scene.Node;
-import widgets.*;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package widgets;
+package com.github.codewitch.javatui.widgets;
 
 
 import javafx.scene.control.TextArea;
