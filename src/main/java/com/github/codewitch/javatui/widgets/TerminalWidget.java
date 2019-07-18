@@ -1,12 +1,12 @@
-package widgets;
+package com.github.codewitch.javatui.widgets;
 
 
 import javafx.scene.control.TextArea;
 
 public class TerminalWidget extends Widget<TextArea> {
 
-    public TerminalWidget(int x,int y) {
-        super(x,y, new TextArea());
+    public TerminalWidget(int x, int y) {
+        super(x, y, new TextArea());
         getHost().setEditable(false);
     }
 

@@ -1,4 +1,4 @@
-package controller;
+package com.github.codewitch.javatui.controller;
 
 import javafx.application.Application;
 
